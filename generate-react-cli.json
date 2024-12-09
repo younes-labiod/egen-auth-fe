@@ -1,0 +1,24 @@
+{
+  "type": "functional",
+  "withStyle": true,
+  "withTest": true,
+  "withStory": false,
+  "styleType": "module.css",
+  "testLibrary": "react-testing-library",
+  "generateIndex": false,
+  "component": {
+    "default": {
+      "type": "functional",
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "styleType": "module.css",
+      "withLazy": false
+    }
+  },
+  "usesTypeScript": true,
+  "usesStyledComponents": false,
+  "usesCssModule": true,
+  "cssPreprocessor": "css"
+}

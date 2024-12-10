@@ -90,6 +90,8 @@ const SignUpPage: React.FC = () => {
             required
             className={styles.input}
           />
+          <br />
+          <br />
           {passwordError && <p className={styles.error}>{passwordError}</p>}
         </div>
         {error && <p className={styles.error}>{error}</p>}

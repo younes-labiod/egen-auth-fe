@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SignUpPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { signUp } from "../../services/apiService";
+import { signIn, signUp } from "../../services/apiService";
 import validator from "validator";
 
 const SignUpPage: React.FC = () => {
@@ -46,8 +46,11 @@ const SignUpPage: React.FC = () => {
 
     try {
       await signUp({ email, name, password });
+
+      const response = await signIn({ email, password });
+      localStorage.setItem("token", response.data.token);
       alert("Sign-Up Successful!");
-      navigate("/signin");
+      navigate("/application");
     } catch (err: any) {
       setError(err.response?.data?.message || "Sign-Up Failed.");
     }
